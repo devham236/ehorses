@@ -6,6 +6,7 @@ import { container, item } from "../Variants/animations"
 
 const HomePage = () => {
   const [horses, setHorses] = useState(null)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     getHorses()
@@ -17,6 +18,7 @@ const HomePage = () => {
       setHorses(data)
     } catch (error) {
       console.log(error.response.data.message)
+      setError(error.response.data.message)
     }
   }
 
@@ -40,17 +42,23 @@ const HomePage = () => {
           Der weltweit größte Online Pferdemarkt
         </motion.h1>
       </div>
-      <div className="w-full h-[70%] p-3 flex items-center justify-center">
-        <motion.div
-          variants={item}
-          className="2xl:w-[60%] max-h-full overflow-auto grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1"
-        >
-          {horses &&
-            horses.map((horse, index) => (
-              <HorseDiv key={index} horseData={horse} />
-            ))}
-        </motion.div>
-      </div>
+      {error ? (
+        <div className="p-4 border border-red-400 rounded-md">
+          <h1 className="text-2xl text-red-400">{error}</h1>
+        </div>
+      ) : (
+        <div className="w-full h-[70%] p-3 flex items-center justify-center">
+          <motion.div
+            variants={item}
+            className="2xl:w-[60%] max-h-full overflow-auto grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1"
+          >
+            {horses &&
+              horses.map((horse, index) => (
+                <HorseDiv key={index} horseData={horse} />
+              ))}
+          </motion.div>
+        </div>
+      )}
     </motion.div>
   )
 }

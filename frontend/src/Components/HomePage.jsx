@@ -29,9 +29,9 @@ const HomePage = () => {
     >
       <div className="w-full h-[30%] flex flex-col items-center justify-center sm:text-center">
         <motion.div variants={item} className="mb-4 flex">
-          <i className="fa-solid fa-horse text-white text-4xl mr-4"></i>
+          <i className="fa-solid fa-horse icon mr-4"></i>
           <h1 className="font-bold text-4xl text-white">E-Horses</h1>
-          <i className="fa-solid fa-horse text-white text-4xl ml-4"></i>
+          <i className="fa-solid fa-horse icon ml-4"></i>
         </motion.div>
         <motion.h1
           variants={item}

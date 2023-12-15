@@ -11,21 +11,21 @@ const HorseDiv = ({ horseData }) => {
         />
       </div>
       <div className="w-full h-[40%] bg-transparent flex flex-col items-center justify-center p-2">
-        <div className=" text-white w-full flex items-center justify-between">
-          <p className=" underline">Rasse:</p>
-          <span className="font-bold">{horseData.rasse}</span>
+        <div className="horseDivInfo">
+          <p>Rasse:</p>
+          <span>{horseData.rasse}</span>
         </div>
-        <div className="text-white w-full flex items-center justify-between">
-          <p className=" underline">Preis:</p>
-          <span className="font-bold">{horseData.price}€</span>
+        <div className="horseDivInfo">
+          <p>Preis:</p>
+          <span>{horseData.price}€</span>
         </div>
-        <div className="text-white w-full flex items-center justify-between">
-          <p className=" underline">Typ:</p>
-          <span className="font-bold">{horseData.type}</span>
+        <div className="horseDivInfo">
+          <p>Typ:</p>
+          <span>{horseData.type}</span>
         </div>
-        <div className="text-white w-full flex items-center justify-between">
-          <p className=" underline">Ort:</p>
-          <span className="font-bold">
+        <div className="horseDivInfo">
+          <p>Ort:</p>
+          <span>
             {horseData.zip}, {horseData.city}
           </span>
         </div>

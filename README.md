@@ -9,3 +9,4 @@ https://github.com/devham236/ehorses/assets/90037750/87afb2a4-b4cd-48d1-a071-a98
 * **Framer Motion:** Eine Animations Library für React.
 * **Node.js:** Eine Javascript runtime environment für Server seitige entwicklung.
 * **Express.js:** Ein framework für Node.js
+* **EsLint/Prettier:** Sorgt für einheitliche Formatierung des gesamten Codes.

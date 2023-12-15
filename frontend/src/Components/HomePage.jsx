@@ -17,7 +17,6 @@ const HomePage = () => {
       const { data } = await axios.get("http://localhost:8000/horses")
       setHorses(data)
     } catch (error) {
-      console.log(error.response.data.message)
       setError(error.response.data.message)
     }
   }

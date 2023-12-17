@@ -9,36 +9,30 @@ https://github.com/devham236/ehorses/assets/90037750/87afb2a4-b4cd-48d1-a071-a98
 git clone https://github.com/devham236/ehorses.git
 ```
 
-2. **Install the server dependencies:**
+2. **Server Dependencies installieren:**
 ```bash
-cd ./server
+cd ./backend
 npm install
 ```
 
-3. **Set up environment variables:**
-Create a **.env** file in the **server** directory and add following variables:
+3. **Environment Variablen erstellen:**
+**.env** Datei im **server** Ordner erstellen und folgende Variable hinzufügen:
 ```makefile
-MONGO_URL=<Your mongodb connection sring/uri>
 PORT=<Port Number>
-JWT_KEY=<Your secret key for JWT>
 ```
 
-4. **Start the server:**
+4. **Server starten:**
 ```bash
 npm start
 ```
 
-5. **In a seperate Terminal, navigate to the client directory:**
+5. **Client Dependencies installieren:**
 ```bash
-cd ./client
-```
-
-6. **Install the frontend dependencies**
-```bash
+cd ./frontend
 npm install
 ```
 
-7. **Start the application:**
+6. **Applikation starten:**
 ```bash
 npm run dev
 ```

@@ -8,19 +8,18 @@ const HomePage = () => {
   const [horses, setHorses] = useState(null)
   const [error, setError] = useState(null)
 
-  useEffect(() => {
-    getHorses()
-  }, [])
-
   const getHorses = async () => {
     try {
       const { data } = await axios.get("http://localhost:8000/horses")
       setHorses(data)
     } catch (error) {
-      console.log(error.response.data.message)
       setError(error.response.data.message)
     }
   }
+
+  useEffect(() => {
+    getHorses()
+  }, [])
 
   return (
     <motion.div
